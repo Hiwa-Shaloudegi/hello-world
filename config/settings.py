@@ -4,6 +4,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+LOGIN_REDIRECT_URL = 'blog:home'
+LOGOUT_REDIRECT_URL = 'blog:home'
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -29,6 +33,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'posts.apps.PostsConfig',
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
